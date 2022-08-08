@@ -116,7 +116,7 @@ class Puzzle(db.Model):  # 存储当前谜语
         ).all()
         li=[]
         for i in column:
-            li.append(i.content)
+            li.append(i.keyword)
         return li
     # 所有不重复的默认不锁的关键词和默认锁的
 
