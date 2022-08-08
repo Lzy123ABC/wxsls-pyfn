@@ -35,10 +35,16 @@ def alter_puzzle(payload: str, message: TextMessage):
     PuzzleUnlock.clear()
     return "更改成功"
 
+@wechat_mgr.command(keywords=["海龟汤汤面","cover"], groups=["situation_puzzle"])
+def get_cover(payload: str, message: TextMessage):
+    cover=Puzzle.get_cover()
+    return cover
 
-# “海龟汤”/
-# Puzzle.get_cover()
 
+@wechat_mgr.command(keywords=["海龟汤关键词","keyword"], groups=["situation_puzzle"])
+def get_cover(payload: str, message: TextMessage):
+    keyword=Puzzle.get_keyword()
+    return cover
 # 询问关键词
 # 返回全部关键词 （可以单独写一个）判断锁与否？？？
 
